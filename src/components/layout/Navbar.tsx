@@ -2,6 +2,7 @@ import Link from "next/link";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import { Button } from "@/components/ui/button";
+import { LogoutButton } from "@/components/layout/LogoutButton";
 
 export default async function Navbar() {
   const session = await getServerSession(authOptions);
@@ -28,13 +29,7 @@ export default async function Navbar() {
                 <Link href={session.user.role === 'TEACHER' ? '/dashboard/teacher' : '/dashboard/student'}>
                   <Button variant="ghost" className="font-bold text-gray-800 hover:text-black hover:bg-gray-100 transition-colors">Dashboard</Button>
                 </Link>
-                <Link href="/api/auth/signout">
-                  <Button 
-                    className="bg-red-600 text-white font-bold hover:bg-red-700 transition-all duration-300 hover:scale-105 active:scale-95 shadow-md hover:shadow-lg"
-                  >
-                    Logout
-                  </Button>
-                </Link>
+                <LogoutButton />
               </>
             ) : (
               <>
