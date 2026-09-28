@@ -41,7 +41,7 @@ export default function SignupPage() {
 
   return (
     <div className="flex justify-center items-center min-h-[calc(100vh-4rem)] bg-gray-50 px-4 py-8">
-      <Card className="w-full max-w-md shadow-xl border-0 ring-1 ring-gray-200">
+      <Card className="w-full max-w-md shadow-xl border-0 ring-1 ring-gray-200 bg-white">
         <CardHeader className="space-y-3 text-center pb-6 pt-8">
           <div className="mx-auto w-14 h-14 bg-blue-600 rounded-xl flex items-center justify-center mb-2 shadow-md">
             <span className="text-white font-extrabold text-3xl">S</span>
@@ -55,15 +55,15 @@ export default function SignupPage() {
           <CardContent className="space-y-5">
             <div className="space-y-2">
               <Label htmlFor="name" className="text-gray-900 font-bold text-sm">Full Name</Label>
-              <Input id="name" placeholder="John Doe" value={name} onChange={e => setName(e.target.value)} required className="text-gray-900 font-semibold border-gray-300 focus:border-blue-500 focus:ring-blue-500" />
+              <Input id="name" placeholder="John Doe" value={name} onChange={e => setName(e.target.value)} required className="bg-gray-50 border border-gray-200 text-gray-900 font-medium placeholder:text-gray-500 focus:bg-white focus:border-blue-600 focus:ring-2 focus:ring-blue-500/20 transition-all h-11" />
             </div>
             <div className="space-y-2">
               <Label htmlFor="email" className="text-gray-900 font-bold text-sm">College Email</Label>
-              <Input id="email" type="email" placeholder="student@college.edu" value={email} onChange={e => setEmail(e.target.value)} required className="text-gray-900 font-semibold border-gray-300 focus:border-blue-500 focus:ring-blue-500" />
+              <Input id="email" type="email" placeholder="student@college.edu" value={email} onChange={e => setEmail(e.target.value)} required className="bg-gray-50 border border-gray-200 text-gray-900 font-medium placeholder:text-gray-500 focus:bg-white focus:border-blue-600 focus:ring-2 focus:ring-blue-500/20 transition-all h-11" />
             </div>
             <div className="space-y-2">
               <Label htmlFor="password" className="text-gray-900 font-bold text-sm">Password</Label>
-              <Input id="password" type="password" placeholder="••••••••" value={password} onChange={e => setPassword(e.target.value)} required className="text-gray-900 font-semibold border-gray-300 focus:border-blue-500 focus:ring-blue-500" />
+              <Input id="password" type="password" placeholder="••••••••" value={password} onChange={e => setPassword(e.target.value)} required className="bg-gray-50 border border-gray-200 text-gray-900 font-medium placeholder:text-gray-500 focus:bg-white focus:border-blue-600 focus:ring-2 focus:ring-blue-500/20 transition-all h-11" />
             </div>
             <div className="space-y-2">
               <Label htmlFor="role" className="text-gray-900 font-bold text-sm">Role</Label>

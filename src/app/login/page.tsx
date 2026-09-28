@@ -45,7 +45,7 @@ export default function LoginPage() {
 
   return (
     <div className="flex justify-center items-center min-h-[calc(100vh-4rem)] bg-gray-50 px-4 py-12">
-      <Card className="w-full max-w-md shadow-xl border-0 ring-1 ring-gray-200">
+      <Card className="w-full max-w-md shadow-xl border-0 ring-1 ring-gray-200 bg-white">
         <CardHeader className="space-y-3 text-center pb-8 pt-8">
           <div className="mx-auto w-14 h-14 bg-blue-600 rounded-xl flex items-center justify-center mb-2 shadow-md">
             <span className="text-white font-extrabold text-3xl">S</span>
@@ -96,7 +96,7 @@ export default function LoginPage() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
-                className="text-gray-900 font-semibold border-gray-300 focus:border-blue-500 focus:ring-blue-500"
+                className="bg-gray-50 border border-gray-200 text-gray-900 font-medium placeholder:text-gray-500 focus:bg-white focus:border-blue-600 focus:ring-2 focus:ring-blue-500/20 transition-all h-11"
               />
             </div>
             <div className="space-y-2">
@@ -111,7 +111,7 @@ export default function LoginPage() {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
-                className="text-gray-900 font-semibold border-gray-300 focus:border-blue-500 focus:ring-blue-500"
+                className="bg-gray-50 border border-gray-200 text-gray-900 font-medium placeholder:text-gray-500 focus:bg-white focus:border-blue-600 focus:ring-2 focus:ring-blue-500/20 transition-all h-11"
               />
             </div>
             {error && <p className="text-sm text-red-700 font-bold bg-red-50 p-3 rounded-md border border-red-200">{error}</p>}
@@ -120,7 +120,7 @@ export default function LoginPage() {
               {isLoading ? <Loader2 className="mr-2 h-5 w-5 animate-spin" /> : "Sign In"}
             </Button>
             <div className="text-sm text-center text-gray-600 font-medium mt-4 pt-2 border-t border-gray-100">
-              Don't have an account? <Link href="/signup" className="text-blue-700 font-bold hover:text-blue-800 hover:underline">Sign up</Link>
+              Don&apos;t have an account? <Link href="/signup" className="text-blue-700 font-bold hover:text-blue-800 hover:underline">Sign up</Link>
             </div>
           </form>
         </CardContent>
